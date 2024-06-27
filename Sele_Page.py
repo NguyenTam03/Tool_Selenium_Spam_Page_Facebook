@@ -153,6 +153,8 @@ def Tool_Comment(url,condition_cmt,name,tk,mk,is2Fa,link_2Fa,driver):
         driver.get('http://facebook.com')
         time.sleep(2)
         content_comment =  "Content"
+        # if condition_cmt == 2:
+        #     content_comment =  "Content"
         #Check_1
         if Check_Dismiss_Ban(tk,mk,link_2Fa,driver):
             return
