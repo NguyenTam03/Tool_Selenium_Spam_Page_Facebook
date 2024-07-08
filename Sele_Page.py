@@ -170,16 +170,26 @@ def Tool_Comment(url,condition_cmt,name,tk,mk,is2Fa,link_2Fa,driver):
         if(is2Fa):
             try:
                 time.sleep(1)
-                try:
-                    keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[2]/ul/li[3]/span/input")
+                # try:
+                #     keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[2]/ul/li[3]/span/input")
+                # except:
+                #     keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[2]/ul/li[2]/span/input")
+                # key = take_key2Fa(link_2Fa)
+                # keyboard.send_keys(key)
+                # time.sleep(1)
+                # keyboard = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/form/div/div[3]/div[1]/button").click()
+                # time.sleep(2)
+                # keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[3]/div[1]/button").click()
+                 try:
+                    keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div[3]/div/form/div/div/div/div/div[1]/input")
                 except:
-                    keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[2]/ul/li[2]/span/input")
+                    keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div[3]/div/form/div/div/div/div/div[1]/input")
                 key = take_key2Fa(link_2Fa)
                 keyboard.send_keys(key)
                 time.sleep(1)
-                keyboard = driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/form/div/div[3]/div[1]/button").click()
+                keyboard = driver.find_element(By.XPATH, "/html/body/div[1]/div/div[1]/div/div[2]/div/div/div[1]/div[1]/div/div[2]/div[2]/div/div/div/div/div[3]/div/div[1]/div/div/div").click()
                 time.sleep(2)
-                keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div/form/div/div[3]/div[1]/button").click()
+                keyboard = driver.find_element(By.XPATH,"/html/body/div[1]/div/div[1]/div/div[3]/div/div/div[1]/div[1]/div[2]/div/div/div[3]/div[1]/div/div/div").click()
                 try:
                     driver.find_element(By.XPATH, "/html/body/div[1]/div[2]/div[1]/div/form/div/div[3]/div[1]/button").click()
                     time.sleep(1)
